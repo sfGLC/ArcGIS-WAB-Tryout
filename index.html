@@ -1,0 +1,36 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scale=no">
+    <title>TypeScript Demo - v4.8</title>
+
+    <link rel="stylesheet" href="https://js.arcgis.com/4.8/esri/css/esri.css">
+    <script>
+        var location = location.pathname.replace(/\/[^/]+$/, "/") + "";
+        window.dojoConfig = {            
+            packages: [
+                {
+                    name: "app",
+                    location: location + "/src"
+                }
+            ]
+        };
+    </script>
+    <script src="https://js.arcgis.com/4.8"></script>
+    <style>
+        html,
+        body,
+        #map {
+            padding: 0;
+            margin: 0;
+            height: 100%;
+            width: 100%
+        }
+    </style>
+</head>
+
+<body>
+    <div id="viewDiv"></div>
+    <script>require(["app/main"])</script>
+</body>
+</html>
